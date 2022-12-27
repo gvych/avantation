@@ -321,7 +321,11 @@ export class AvantationAPI implements Avantation.InputConfig {
             content: {
                 [res.content.mimeType]: {
                     schema: Util.generateSchema(responseData),
-                    example: responseData
+                    examples: {
+                      example:  {
+                        value: responseData
+                      }
+                    }
                 }
             }
         };
